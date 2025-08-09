@@ -361,6 +361,99 @@ body {
   font-size: clamp(20px, 2.78vw, 40px);
 }
 
+.footer {
+  padding-top: 126px;
+  padding-bottom: 140px;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.footer-logo-image {
+  margin-left: -58px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-link {
+  margin-top: -25px;
+}
+
+.footer-contacts-link {
+  position: relative;
+  color: var(--color-light);
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.contacts-email::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url(/icons/email.svg) center/contain no-repeat;
+  bottom: 2px;
+  left: -20px;
+}
+
+.website-link::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url(/icons/global.svg) center/contain no-repeat;
+  bottom: 2px;
+  left: -20px;
+}
+
+.footer-contacts-link:hover {
+  text-decoration: underline;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.footer-link {
+  color: var(--color-light);
+}
+
+.footer-list li:first-child,
+.footer__soc1als-title {
+  font-weight: 500;
+}
+
+.footer-list li:not(:first-child) {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.footer-list li:not(:first-child):hover {
+  opacity: 1;
+}
+
+.footer__soc1als {
+  margin-top: -60px;
+}
+
+.footer__soc1als-title {
+  margin-bottom: 15px;
+}
+
+.footer__soc1als-list {
+  display: flex;
+  column-gap: 10px;
+}
+
 @media (max-width: 1220px) {
   .banner {
     padding-top: 200px;
@@ -380,6 +473,10 @@ body {
 
   .feedback__wrapper {
     margin-bottom: 50px;
+  }
+
+  .footer-wrapper {
+    padding-left: 30px;
   }
 }
 
@@ -464,6 +561,26 @@ body {
     flex-direction: column;
     row-gap: 30px;
   }
+
+  .footer {
+    padding-block: 50px;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    padding-left: 0;
+  }
+
+  .contacts {
+    width: 150px;
+    margin-left: 65px;
+  }
+
+  .footer__soc1als {
+    margin-top: 11px;
+    margin-right: -95%;
+  }
 }
 
 @media (max-width: 570px) {
@@ -496,6 +613,10 @@ body {
   .product__section-description {
     max-width: 200px;
   }
+
+  .contacts {
+    margin-left: 45px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -506,5 +627,9 @@ body {
   .download__wrapper {
     padding-inline: 30px;
     padding-block: 30px;
+  }
+
+  .contacts {
+    margin-left: 35px;
   }
 }
